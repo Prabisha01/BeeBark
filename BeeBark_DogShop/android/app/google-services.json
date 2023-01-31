@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "95747468886",
+    "project_id": "beebark-5e3bd",
+    "storage_bucket": "beebark-5e3bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95747468886:android:e58c13a459958c92db15f7",
+        "android_client_info": {
+          "package_name": "com.example.beebark_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "95747468886-vu3f6000dmd41r7pbca74vqh1o8fr8bn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvMVsoF5esrF0LaStQGjTU-I7zKCIFYRg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "95747468886-vu3f6000dmd41r7pbca74vqh1o8fr8bn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
