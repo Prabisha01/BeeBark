@@ -1,12 +1,23 @@
 import 'package:BeeBark/screens/auth/forget_password_screen.dart';
 import 'package:BeeBark/screens/auth/login_screen.dart';
 import 'package:BeeBark/screens/auth/register_screen.dart';
+import 'package:BeeBark/screens/category/single_category_screen.dart';
+import 'package:BeeBark/screens/dashboard/dashboard.dart';
+import 'package:BeeBark/screens/product/add_product_screen.dart';
+import 'package:BeeBark/screens/product/edit_product_screen.dart';
+import 'package:BeeBark/screens/product/my_product_screen.dart';
+import 'package:BeeBark/screens/product/single_product_screen.dart';
 import 'package:BeeBark/screens/splash_screen.dart';
+import 'package:BeeBark/services/local_notification_service.dart';
 import 'package:BeeBark/viewmodels/auth_viewmodel.dart';
+import 'package:BeeBark/viewmodels/category_viewmodel.dart';
 import 'package:BeeBark/viewmodels/global_ui_viewmodel.dart';
+import 'package:BeeBark/viewmodels/product_viewmodel.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:loader_overlay/loader_overlay.dart';
+
+
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -19,7 +30,7 @@ void main() async {
     //   projectId: "my-app-name-3d643",
     // ),
   );
-
+  NotificationService.initialize();
   runApp(MyApp());
 }
 
@@ -33,7 +44,8 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider (create: (_) => GlobalUIViewModel()),
         ChangeNotifierProvider (create: (_) => AuthViewModel()),
-
+        ChangeNotifierProvider (create: (_) => CategoryViewModel()),
+        ChangeNotifierProvider (create: (_) => ProductViewModel()),
       ],
       child: GlobalLoaderOverlay(
         useDefaultLoading: false,
@@ -67,7 +79,12 @@ class MyApp extends StatelessWidget {
                 "/splash": (BuildContext context)=>SplashScreen(),
                 "/register": (BuildContext context)=>RegisterScreen(),
                 "/forget-password": (BuildContext context)=>ForgetPasswordScreen(),
-
+                "/dashboard": (BuildContext context)=>DashboardScreen(),
+                "/add-product": (BuildContext context)=>AddProductScreen(),
+                "/edit-product": (BuildContext context)=>EditProductScreen(),
+                "/single-product": (BuildContext context)=>SingleProductScreen(),
+                "/single-category": (BuildContext context)=>SingleCategoryScreen(),
+                "/my-products": (BuildContext context)=>MyProductScreen(),
               },
             );
           }

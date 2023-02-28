@@ -1,4 +1,4 @@
-# beebark_dogshop
+# Bee Bark
 
 A new Flutter project.
 

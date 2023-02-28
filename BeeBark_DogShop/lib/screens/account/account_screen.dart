@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-
 import '../../viewmodels/auth_viewmodel.dart';
 import '../../viewmodels/global_ui_viewmodel.dart';
 
@@ -49,9 +48,9 @@ class _AccountScreenState extends State<AccountScreen> {
             height: 10,
           ),
           Image.asset(
-            "assets/images/logo.png",
-            height: 100,
-            width: 100,
+            "assets/images/abc.png",
+            height: 500,
+            width: 500,
           ),
           SizedBox(
             height: 10,
@@ -78,14 +77,6 @@ class _AccountScreenState extends State<AccountScreen> {
                 logout();
               }
           ),
-          makeSettings(
-              icon: Icon(Icons.android),
-              title: "Version",
-              subtitle: "0.0.1",
-              onTap: (){
-
-              }
-          )
         ],
       ),
     );
@@ -98,9 +89,9 @@ class _AccountScreenState extends State<AccountScreen> {
         margin: EdgeInsets.symmetric(horizontal: 5),
         child: Card(
             elevation: 4,
-            color: Colors.white,
+            color: Colors.black12,
             child: ListTile(
-                tileColor: Colors.white,
+                tileColor: Colors.lightBlueAccent,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(0.5),
                 ),
